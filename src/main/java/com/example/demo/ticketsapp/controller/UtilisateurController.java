@@ -3,12 +3,11 @@ package com.example.demo.ticketsapp.controller;
 import com.example.demo.ticketsapp.model.Utilisateur;
 import com.example.demo.ticketsapp.service.UtilisateurService;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*",
-        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class UtilisateurController {
 
     private final UtilisateurService utilisateurService;
