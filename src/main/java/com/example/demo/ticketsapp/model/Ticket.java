@@ -26,9 +26,10 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private Statut statut;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private Utilisateur assigneA;
+
 
     private LocalDateTime dateCreation;
     private LocalDateTime dateModification;
